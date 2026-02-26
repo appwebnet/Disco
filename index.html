@@ -1,75 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl" oncontextmenu="return false;" draggable="false" ondragstart="return false">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music</title>
-  <link rel="stylesheet" href="main.css">
+  <title>bebinid</title>
+  <link rel="icon" href="img/icon-page.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body bgcolor="#121212">
 
-  <p class="part-txt">Top Part</p>
+<body>
 
-  <div class="top-box">
-    
-    <div class="part-box-a" style="cursor: pointer;">
-      <p>Acidic acid</p>
-      <img src="img/5.png">
-    </div>
-    
-    <script>
-      document.querySelector(".part-box-a").onclick = function() {
-        window.location.href = "acidic.html";
-      }
-    </script>
-    
+  <div class="head">
+    <button class="s-bu" data-sheet="sheet1">
+      <img src="img/search.svg" alt="menu">
+      <p>جستوجو</p>
+    </button>
 
-    <div class="part-box-b" style="cursor: pointer;">
-      <p>Long long</p>
-      <img src="img/6.png">
-    </div>
-    
-    <script>
-      document.querySelector(".part-box-b").onclick = function() {
-        window.location.href = "long.html";
-      }
-    </script>
-    
-    
+    <button class="s-bu" data-sheet="sheet2">
+      <img src="img/loc.svg" alt="menu">
+      <p>سلمانشهر</p>
+    </button>
+
   </div>
 
-  <p class="part-txt">Hot Music</p>
-  
-  <div class="box-music">
-    <img src="img/2.jpg">
-    <div class="txt-music-box">
-      <a href="https://drive.google.com/file/d/1pTakWPa2NQViVRFXhn_gY-HzmDYRDJkL/view?usp=sharing">
-        <p class="name-music">Ook!</p>
-        <p class="artist-name">Reza Pishro</p>
-      </a>
+  <div class="reels-container">
+
+    <div class="reel">
+      <div class="media-wrapper">
+
+        <img src="img/rell-1.jpg" alt="">
+
+        <div class="actions">
+          <div class="open-link"><img src="img/edit.svg" alt="icon"></div>
+          <div class="open-link"><img src="img/like.svg" alt="icon"></div>
+          <div class="open-link"><img src="img/setting.svg" alt="icon"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="reel">
+      <div class="media-wrapper">
+
+        <img src="img/rell-2.jpg" alt="">
+
+        <div class="actions">
+          <div class="open-link"><img src="img/edit.svg" alt="icon"></div>
+          <div class="open-link"><img src="img/like.svg" alt="icon"></div>
+          <div class="open-link"><img src="img/setting.svg" alt="icon"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="sheet" id="sheet1">
+    <div class="handle"></div>
+    <div class="content">
+      <p class="title-dialog">جستوجو اگهی</p>
+
+      <div class="search-box">
+        <input class="input-txt" type="text" placeholder="جستجو">
+        <button class="select-loc">انتخاب مکان</button>
+      </div>
+
+
+      <div class="select-box-big">
+        <img class="find-img" src="img/rell-1.jpg" alt="find-img">
+        <img class="find-img" src="img/rell-1.jpg" alt="find-img">
+        <img class="find-img" src="img/rell-1.jpg" alt="find-img">
+      </div>
+
     </div>
   </div>
 
-  <div class="box-music">
-    <img src="img/3.jpg">
-    <div class="txt-music-box">
-      <a href="">
-        <p class="name-music">Ook!</p>
-        <p class="artist-name">Reza Pishro</p>
-      </a>
+
+  <div class="sheet" id="sheet2">
+    <div class="handle"></div>
+    <div class="content">
+      <p class="title-dialog">انتخاب استان</p>
+
+      <button class="bu-dialog">
+        <span>کل ایران</span>
+        <img src="img/left.svg" alt="icon-bu">
+      </button>
+
+      <button class="bu-dialog">
+        <span>اردبیل</span>
+        <img src="img/left.svg" alt="icon-bu">
+      </button>
+
+      <button class="bu-dialog">
+        <span>مازندران</span>
+        <img src="img/left.svg" alt="icon-bu">
+      </button>
+
+      <button class="bu-dialog">
+        <span>اصفهان</span>
+        <img src="img/left.svg" alt="icon-bu">
+      </button>
     </div>
   </div>
 
-  <div class="box-music">
-    <img src="img/4.jpg">
-    <div class="txt-music-box">
-      <a href="">
-        <p class="name-music">Ook!</p>
-        <p class="artist-name">Reza Pishro</p>
-      </a>
-    </div>
-  </div>
 
-  
 </body>
+
 </html>
