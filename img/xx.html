@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Auto-Next Video</title>
+  <style>
+    body { margin: 0; background: black; }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<video id="video" autoplay muted playsinline></video>
+
+<script>
+  // لینک های مستقیم MP4 که واقعی کار می کنند
+  const videos = [
+    "https://cdn.pixabay.com/vimeo/700853207/pexels-pixabay-700853207.mp4",
+    "https://cdn.pixabay.com/vimeo/697394610/pexels-pixabay-697394610.mp4",
+    "https://cdn.pixabay.com/vimeo/686509452/pexels-pixabay-686509452.mp4"
+  ];
+
+  const videoEl = document.getElementById("video");
+
+  function playRandomVideo() {
+    const randomIndex = Math.floor(Math.random() * videos.length);
+    videoEl.src = videos[randomIndex];
+    videoEl.play();
+  }
+
+  playRandomVideo();
+
+  videoEl.addEventListener("ended", () => {
+    playRandomVideo();
+  });
+</script>
+
+</body>
+</html>
